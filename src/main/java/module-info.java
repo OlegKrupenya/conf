@@ -7,4 +7,5 @@ module conf.main {
     requires spring.boot.autoconfigure;
     requires spring.boot;
     requires spring.beans;
+    requires java.xml.bind;
 }
