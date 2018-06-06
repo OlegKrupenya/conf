@@ -1,0 +1,33 @@
+D:\dev\projects\split>javac --patch-module java.base=src -d mypatches/java.base
+src/java/util/concurrent/ConcurrentHashMap.java
+
+D:\dev\projects\split>javac src/Main.java
+
+D:\dev\projects\split>cd src
+
+D:\dev\projects\split\src>java --patch-module java.base=../mypatches/java.base Main
+1
+
+
+
+
+
+javac --patch-module splitjar=../split1.jar module-info.java Main.java
+
+
+
+
+
+D:\dev\projects\test>javac D.java -cp guava-24.1-jre.jar
+
+D:\dev\projects\test>java -classpath . D
+3
+
+java compiler
+--patch-module splitjar=D:\dev\projects\splitjar\split1.jar;D:\dev\projects\splitjar\split2.jar
+run
+--patch-module splitjar=D:\dev\projects\splitjar\split1.jar;D:\dev\projects\splitjar\split2.jar
+
+
+
+--patch-module conf=D:\dev\projects\conf\src\main\resources\bson-3.6.3.jar;D:\dev\projects\conf\src\main\resources\mongodb-driver-3.6.3.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.0.2.RELEASE\spring-boot-autoconfigure-2.0.2.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb\2.0.2.RELEASE\spring-boot-starter-data-mongodb-2.0.2.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.0.2.RELEASE\spring-boot-starter-logging-2.0.2.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\boot\spring-boot-starter\2.0.2.RELEASE\spring-boot-starter-2.0.2.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\boot\spring-boot\2.0.2.RELEASE\spring-boot-2.0.2.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\data\spring-data-commons\2.0.7.RELEASE\spring-data-commons-2.0.7.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\data\spring-data-mongodb\2.0.7.RELEASE\spring-data-mongodb-2.0.7.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-aop\5.0.6.RELEASE\spring-aop-5.0.6.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-beans\5.0.6.RELEASE\spring-beans-5.0.6.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-context\5.0.6.RELEASE\spring-context-5.0.6.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-core\5.0.6.RELEASE\spring-core-5.0.6.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-expression\5.0.6.RELEASE\spring-expression-5.0.6.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-jcl\5.0.6.RELEASE\spring-jcl-5.0.6.RELEASE.jar;C:\Users\oleh.krupenia\.m2\repository\org\springframework\spring-tx\5.0.6.RELEASE\spring-tx-5.0.6.RELEASE.jar
